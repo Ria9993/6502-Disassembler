@@ -9,13 +9,13 @@ typedef enum {
     AM_ZP,
     AM_IMP,
     AM_REL,
-    AM__ABS_,
+    AM__ABS_, //< (a)
     AM_A_X,
     AM_A_Y,
     AM_ZP_X,
     AM_ZP_Y,
-    AM__ZP_X_,
-    AM__ZP__Y
+    AM__ZP_X_, //< (zp,x)
+    AM__ZP__Y //< (zp),y
 } am_global_t;
 const char AM_STR[][7] = { "A", "#", "a", "zp", "i", "r", "(a)", "a,x", "a,y", "zp,x", "zp,y", "(zp,x)", "(zp),y" };
 const unsigned char AM_OPERAND_BYTE[] = { 0, 1, 2, 1, 0, 1, 2, 2, 2, 1, 1, 1, 1 };
